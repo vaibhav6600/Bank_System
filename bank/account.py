@@ -48,6 +48,8 @@ class Account:
         )
 
         connection.commit()
+        # Update the object's in‑memory balance after a successful deposit
+        self.balance += amount
 
         cursor.close()
         connection.close()
